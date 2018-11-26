@@ -1,0 +1,76 @@
+
+*, *::before, *::after{box-sizing: border-box;}
+
+body{
+    margin: 0;
+    background-image: url(images/quentin-dr-178888-unsplash.jpg);
+    background-size: cover;
+    font-family: 'Dosis', sans-serif;
+}
+
+ul{
+    list-style: none;
+    color: white;
+}
+
+#navbar{
+    display: grid;
+    grid-template-columns:73% 10% 12%;
+    grid-template-rows: 1fr;
+    text-decoration: none;
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+    justify-items: end;
+    justify-self: end;
+    padding: 0 0 10px 0;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,1);
+    font-size: 16px;
+    }
+
+
+#navbar a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+#navbar a:hover{
+    color: rgb(158, 136, 65);
+}
+
+#black{
+    background: rgb(8, 8, 8);
+    position: relative;
+    top:600px;
+    height: 400px;
+}
+
+#black{
+    padding: 50px 0 0 0;
+}
+.container-port{
+    /* display: grid;
+    grid-template-columns: repeat(3, 20vw);
+    grid-template-rows: 20vw;
+    margin: 0 150px 0 150px;
+    grid-gap: calc(32vw - 300px); */
+    display: flex;
+    justify-content: space-around;
+    margin: 0 100px 0 100px;
+}
+
+
+.box-port{
+color: aliceblue;
+background: rgb(53, 52, 52);
+height: 20vw;
+width: 20vw;
+}
+
+
+
+#img-cool{
+    max-height: 100%;
+    max-width: auto;
+    opacity: 0.4;
+}
