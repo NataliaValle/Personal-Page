@@ -1,11 +1,12 @@
 
-*, *::before, *::after{box-sizing: border-box;}
+*, *::before, *::after{box-sizing: border-box; font-family: 'playfair display', serif;}
+
 
 body{
-    margin: 0;
     background-image: url(images/quentin-dr-178888-unsplash.jpg);
     background-size: cover;
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Playfair Display', serif;
+    
 }
 
 ul{
@@ -15,17 +16,19 @@ ul{
 
 #navbar{
     display: grid;
-    grid-template-columns:73% 10% 12%;
+    grid-template-columns:70% 1fr 1fr 1.5fr 1fr;
     grid-template-rows: 1fr;
     text-decoration: none;
     position: relative;
     width: 100%;
     margin-top: 10px;
+    margin-right: 40px;
     justify-items: end;
     justify-self: end;
     padding: 0 0 10px 0;
     box-shadow: 0 .125rem .25rem rgba(0,0,0,1);
     font-size: 16px;
+    
     }
 
 
@@ -36,41 +39,106 @@ ul{
 
 #navbar a:hover{
     color: rgb(158, 136, 65);
+    
 }
 
 #black{
     background: rgb(8, 8, 8);
     position: relative;
     top:600px;
-    height: 400px;
+    height: 500px;
+    padding: 80px 0 0 0;
 }
 
-#black{
-    padding: 50px 0 0 0;
-}
+/* PORTFOLIO */
+
 .container-port{
-    /* display: grid;
-    grid-template-columns: repeat(3, 20vw);
-    grid-template-rows: 20vw;
-    margin: 0 150px 0 150px;
-    grid-gap: calc(32vw - 300px); */
     display: flex;
-    justify-content: space-around;
-    margin: 0 100px 0 100px;
+    justify-content: space-between;
+    margin: 0 140px 0 140px;
+
 }
-
-
-.box-port{
-color: aliceblue;
-background: rgb(53, 52, 52);
+ 
+.box{
 height: 20vw;
 width: 20vw;
+background-image: url(images/Capture.PNG);
+background-size: 100% 100%;
+opacity: 0.5;
+transition: opacity ease-out 250ms;
+}
+
+/* .box:hover::after{
+    display: inline-block;
+    content: '';
+    height: 60px;
+    width: 100%;
+    top: 100px;
+    background: red;
+} */
+
+.up {
+    height: 6vw;
+    width: 20vw;
+    background: rgb(44, 52, 88);
+    margin: 0;
+    position: relative;
+    animation-name: up;
+    animation-duration: 250ms;
+    top: 70%;
+    opacity: 0;
+    transition: opacity ease-out 500ms;
+}
+#up2, #up3{
+    top:-30%;
+}
+.box:hover .up{
+    opacity: 1;
 }
 
 
 
-#img-cool{
-    max-height: 100%;
-    max-width: auto;
+.box-img{
+    max-width: 100%;
+    max-height: auto;
+    display: block;
     opacity: 0.4;
+    transition:opacity ease-out 500ms;
+    
+   }
+
+.box-text{
+    position:absolute;
+    color: whitesmoke;
+    opacity:0;
+    transition: opacity ease-out 250ms;
+    top: 55%;
+    margin: 20px;
+    z-index: 100;
 }
+    
+.box:hover .box-text{
+    opacity: 1;
+}
+
+.box:hover {
+    opacity: 1;    
+} 
+
+
+/* #img-cool:hover{
+    opacity: 1;
+
+} */
+ 
+/* #box::before,::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    transition: transform ease-out 250ms;
+    background: pink;
+} */
