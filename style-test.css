@@ -1,12 +1,20 @@
 
 *, *::before, *::after{box-sizing: border-box; font-family: 'playfair display', serif;}
 
+:root{
+    --gold: rgb(158, 136, 65) ;
+    --black: #272727;
+    --white: whitesmoke;
+    --pink: #c03883;
+    --orange: rgb(252, 175, 33); 
+}
+
 
 body{
     background-image: url(images/quentin-dr-178888-unsplash.jpg);
-    background-size: cover;
+    background-size: 100vw auto;
     font-family: 'Playfair Display', serif;
-    
+    margin: 0;
 }
 
 ul{
@@ -16,7 +24,7 @@ ul{
 
 #navbar{
     display: grid;
-    grid-template-columns:70% 1fr 1fr 1.5fr 1fr;
+    grid-template-columns:70% 1.5fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     text-decoration: none;
     position: relative;
@@ -28,6 +36,7 @@ ul{
     padding: 0 0 10px 0;
     box-shadow: 0 .125rem .25rem rgba(0,0,0,1);
     font-size: 16px;
+    padding: 5px 0 10px 0;
     
     }
 
@@ -42,75 +51,80 @@ ul{
     
 }
 
-.front{
-    color: antiquewhite;
-    font-size: 10px;
-    display: grid;
-    grid-template-columns: repeat(6, auto-fill);
-    grid-template-rows:  repeat(7, auto-fill);
-    grid-gap: 10px;
+#container-icon{
+    height: 200px;
+    width: 200px;
     position: relative;
-    top: 50px;
-    /* column-gap: 50px 4/5;  */
-    
+    left: 45%;
+    top: 20px;
 }
+
+#photo-icon{
+    max-width: 100%;
+    max-height: auto;
+    border-radius: 50%;
+    border: 3px solid rgb(158, 136, 65);
+   }
+
+.front{
+    color:antiquewhite;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, autofill);
+    position: relative;
+    top: 60px;
+}
+
+
+
 .child{
     margin:0;
     text-align: center;
-    /* background: pink; */
+    font-family: 'Homemade Apple', cursive;
+    font-size: 30px;
+    text-shadow: 2px 2px 4px rgb(41, 40, 40);
+}
 
-}
-#eco{
-    grid-row: 2/3;
-    grid-column: span 2/3;
-    font-size: 40px;
-}
-#dev{
-    grid-column: span 2/5;
-    grid-row: 3/4;
-    font-size: 40px;
-}
-#philo{
-    grid-column: span 2/4;
-    grid-row: 4/5;
-    font-size: 40px;
-}
+
 #nat{
-    grid-column: span 2/7;
-    grid-row: span 2 / 5;
-    font-size: 80px;
-    margin: 0;
-    text-align: initial;
-    text-justify: center;
-    line-height: 1;
-}
-#nat h1{
-    text-transform: capitalize;
-}
-/* #valle{
-    grid-column: span 2/7;
-    grid-row: span 2/ 6;
-    font-size: 70px;
-    text-align: initial;
-    margin: 0;
-} */
+font-size: 60px;
+} 
+
 #black{
-    background: rgb(8, 8, 8);
+    background: rgb(6, 6, 10);
     position: relative;
-    top:600px;
-    height: 500px;
+    top:400px;
+    height: 700px;
     padding: 80px 0 0 0;
-}
+    width: 100%;
+} 
 
 /* PORTFOLIO */
+
+
+#portfolio-title{
+    color: whitesmoke;
+    margin: -90px 0 50px 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+   }
+
+#portfolio-title h2{
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    border-style: inset;
+    border-color: burlywood;
+    display: inline-block;
+    padding: 5px;
+}
 
 .container-port{
     display: flex;
     justify-content: space-between;
     margin: 0 140px 0 140px;
-
 }
- 
+
 .box{
 height: 20vw;
 width: 20vw;
@@ -119,7 +133,13 @@ background-size: 100% 100%;
 opacity: 0.5;
 transition: opacity ease-out 250ms;
 }
+#box1{
+    background-image: url(images/Capture.PNG);
+}
+#box2{
+    background-image: url(images/survey.PNG);
 
+}
 /* .box:hover::after{
     display: inline-block;
     content: '';
@@ -133,6 +153,8 @@ transition: opacity ease-out 250ms;
     height: 6vw;
     width: 20vw;
     background: rgb(44, 52, 88);
+    /* background: rgb(158, 136, 65); */
+    box-shadow: .125rem  0 0 0 rgba(0,0,0,1);
     margin: 0;
     position: relative;
     animation-name: up;
@@ -140,6 +162,7 @@ transition: opacity ease-out 250ms;
     top: 70%;
     opacity: 0;
     transition: opacity ease-out 500ms;
+
 }
 #up2, #up3{
     top:-30%;
